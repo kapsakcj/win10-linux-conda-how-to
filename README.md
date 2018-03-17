@@ -11,7 +11,7 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
   
 Requirements
 ------
-  * x64 based processor, otherwise known as a 64-bit processor (check by going to Settings>System>About>Device Specifications>System type)
+  * x64 based processor, AKA 64-bit processor (check by going to **Settings** -> **System** -> **About** -> **Device Specifications** -> **System type**)
   * Windows 10 build version 16215 or later. [How to check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number)
     * [It is possible to use an earlier build of Win10, but I've not tried this before.](https://docs.microsoft.com/en-us/windows/wsl/install-win10#for-anniversary-update-and-creators-update-install-using-lxrun)
   
@@ -21,9 +21,8 @@ General Resources
   * [FAQ's about the Windows 10 Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/faq)
   
   
-
-# Step 1. Install Linux Subsystem on your computer running Windows 10
-The first step is to install the Linux Subsystem into your Windows 10 OS. I've copied these instructions from Microsoft's documentation found here: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+## Step 1. Install Linux Subsystem on your computer running Windows 10
+The first step is to install the Linux Subsystem into your Windows 10 OS. I've copied these instructions from Microsoft's documentation found here: https://docs.microsoft.com/en-us/windows/wsl/install-win10 Thanks to the folks at Microsoft for putting together this documentation and making it available on github!
 
 Enable the "Windows Subsystem for Linux" optional feature and reboot.
 
@@ -34,10 +33,10 @@ Enable the "Windows Subsystem for Linux" optional feature and reboot.
 
 2. Restart your computer when prompted.
 
-## Install your Linux Distribution of Choice
+## Step 2. Install your Linux Distribution of Choice
 ### Fall Creators Update and later: Install from the Microsoft Store
 
-> This section is for Windows build 16215 or later.  Follow these steps to [check your build](troubleshooting.md#check-your-build-number).  For earlier versions of Windows 10, follow [these instructions using lxrun](install-win10.md#for-anniversary-update-and-creators-update-install-using-lxrun).
+> This section is for Windows build 16215 or later.  Follow these steps to [check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number).  For earlier versions of Windows 10, follow [these instructions using lxrun](https://docs.microsoft.com/en-us/windows/wsl/install-win10#for-anniversary-update-and-creators-update-install-using-lxrun).
 
 1. Open the Microsoft Store and choose your favorite Linux distribution.      
     Here are links directly to the store installers:
@@ -47,16 +46,26 @@ Enable the "Windows Subsystem for Linux" optional feature and reboot.
     * [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)
     * [Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
 
+    ![](UbuntuStore.png)
+
 2. Select "Get"
 
     > **Troubleshooting: Installation failed with error 0x80070003**  
     > The Windows Subsystem for Linux only runs on your system drive (usually this is your C: drive).  Make sure that new apps are stored on your system drive.  
     > Open **Settings** -> **Storage** -> **More Storage Settings: Change where new content is saved**
+    > ![](AppStorage.png)
     
 3. Once the download has completed, select "Launch".  
     This will open a console window.  Wait for installation to complete then you will be prompted to create your LINUX user account.
+    ![](UbuntuInstall.png)
     
     > **Troubleshooting: Installation failed with error 0x8007007e**  
     > This error occurs when your system doesn't support Linux from the store.  Make sure that:
-    > * You're running Windows build 16215 or later. [Check your build](troubleshooting.md#check-your-build-number).
-    > * The Windows Subsystem for Linux optional component is enabled and the computer has restarted.  [Make sure WSL is enabled](troubleshooting.md#confirm-wsl-is-enabled).
+    > * You're running Windows build 16215 or later. [Check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number).
+    > * The Windows Subsystem for Linux optional component is enabled and the computer has restarted.  [Make sure WSL is enabled](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#confirm-wsl-is-enabled).
+
+
+    
+5. Create your LINUX username and password.  This user account has no relationship to your Windows username and password and hence can be different. [Read more](https://docs.microsoft.com/en-us/windows/wsl/user-support).
+
+You're done!  Now you can use your Linux environment.
