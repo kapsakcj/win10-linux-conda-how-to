@@ -1,12 +1,7 @@
 # win10-linux-conda-how-to
 A tutorial on how to set up a Linux environment on a computer running Windows 10. Followed by how to install and use (bio)conda.
 
-<div class="center">
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For anyone wondering how to set this up on their own computer running Windows 10, here&#39;s a thread on how I did so. <a href="https://twitter.com/hashtag/sharingiscaring?src=hash&amp;ref_src=twsrc%5Etfw">#sharingiscaring</a> <a href="https://twitter.com/hashtag/bioinstallmatics?src=hash&amp;ref_src=twsrc%5Etfw">#bioinstallmatics</a>  1/x <a href="https://t.co/WATxmgtOuc">https://t.co/WATxmgtOuc</a></p>&mdash; Curtis Kapsak (@CurtisKapsak) <a href="https://twitter.com/CurtisKapsak/status/974737312155422721?ref_src=twsrc%5Etfw">March 16, 2018</a></blockquote> 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-[I started this tutorial on Twitter](https://twitter.com/CurtisKapsak/status/974737312155422721) but after a suggestion, decided to create a repository to document everything. This way people can comment, suggest changes, make recommendations, etc. to improve the tutorial!
+[I started this tutorial on a Twitter thread](https://twitter.com/CurtisKapsak/status/974737312155422721) but after a suggestion, decided to create a repository to document everything. This way people can comment, suggest changes, make recommendations, etc. to improve the tutorial!
 
 I've created this tutorial to help out anyone interested in doing bioinformatics analyses but they:
   * Do not have a Mac or a computer running Linux (running natively)
@@ -180,15 +175,15 @@ conda list -n unicyclerEnvironment
 ```
 You should see a list of all dependencies that are installed into the specific environment that you are working in. There are many ways to change and manipulate this list. See the one liners below.
 
-6. Most programs have a short command used to check the installation, either by running `programName --version` or `programname --help` or sometimes even simply `program name`. In the case of Unicycler, Run the following:
+5. Most programs have a short command used to check the installation, either by running `programName --version` or `programname --help` or sometimes even simply `program name`. In the case of Unicycler, Run the following:
 ```
 (unicyclerEnvironment) $ unicycler --help
 ```
-7. When you would like to leave the unicyclerEnvironment and return to the root environment, use the following command:
+6. When you would like to leave the unicyclerEnvironment and return to the root environment, use the following command:
 ```
 (unicyclerEnvironment) $ source deactivate 
 ```
-You can combine many of the above steps with simple one-liner! This is actually the preferred route, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
+You can combine many of the above steps with simple one-liner! This is actually the **preferred route**, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
 ```
 conda create -n spadesEnv spades=3.11.1 bwa samtools fastqc
 ```
