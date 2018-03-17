@@ -98,7 +98,7 @@ I highly reccommend that you scan through this before proceeding. Basically don'
 
 You can access your computer's storage drives in the directory `/mnt/[name of your drive]` usually`/mnt/c` or `/mnt/d` for saving files there and if you would like to access them from your Linux command line.
 
-## Step 3. Install Miniconda into your new Linux environment
+## Step 3. Install conda into your new Linux environment using Miniconda
 The bulk of these directions were pulled from here: https://conda.io/docs/user-guide/install/linux.html 
 
 ### Linux Environment Requirements
