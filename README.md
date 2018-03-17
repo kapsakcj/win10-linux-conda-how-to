@@ -32,6 +32,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * [Bioconda: A sustainable and comprehensive software distribution for the life sciences | bioRxiv](https://www.biorxiv.org/content/early/2017/10/27/207092)
   * [Using Bioconda -- Bioconda documentation](https://bioconda.github.io/)
   * [Managing conda environments](https://conda.io/docs/user-guide/tasks/manage-environments.html)
+  * [WARNING from Microsoft: Do not change Linux files using Windows apps and tools](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
   
 
  
@@ -91,6 +92,11 @@ If you use a distribution other than Ubuntu, ensure that it has the following pr
 5. Create your LINUX username and password.  This user account has no relationship to your Windows username and password and hence can be different. [Read more](https://docs.microsoft.com/en-us/windows/wsl/user-support).
 
 You're done!  Now you can use your Linux environment.
+
+#### !!Warning about editing linux files using Windows apps and tools!!
+I highly reccommend that you scan through this before proceeding. Basically don't mess with any of the linux files using Windows apps or tools. https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/
+
+You can access your computer's storage drives in the directory `/mnt/[name of your drive]` usually`/mnt/c` or `/mnt/d` for saving files there and if you would like to access them from your Linux command line.
 
 ## Step 3. Install Miniconda into your new Linux environment
 The bulk of these directions were pulled from here: https://conda.io/docs/user-guide/install/linux.html 
@@ -227,3 +233,7 @@ conda create -n unicyclerEnv unicycler
 ```
 conda remove --name mynewenvironment --all
 ```
+
+## Bonus Goodies
+  * [How to change the font and window colors so that your eyes don't bleed from Microsoft's awful choice of default colors](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2)
+  * 
