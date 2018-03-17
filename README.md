@@ -133,7 +133,7 @@ conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 ```
-You should either see a warning message after running the first command, but that is OK, simply proceed with the three commands. You will not see any message or output after entering the third command. That is OK, it just means that there is no output to the terminal.
+You should see a warning message after running the first command, but that is OK, simply proceed with the three commands. You will not see any message or output after entering the third command. That is OK, it just means that there is no output to the terminal.
 
 ## Step 5. Use conda to install any of the 3000+ bioinformatics tools available in the Bioconda repository
 Some examples of tools available on Bioconda's Repository. Just try searching for you favorite tools here: https://bioconda.github.io/recipes.html:
