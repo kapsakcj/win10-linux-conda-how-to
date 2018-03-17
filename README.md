@@ -1,6 +1,11 @@
 # win10-linux-conda-how-to
 A tutorial on how to set up a Linux environment on a computer running Windows 10. Followed by how to install and use (bio)conda.
 
+<div class="center">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For anyone wondering how to set this up on their own computer running Windows 10, here&#39;s a thread on how I did so. <a href="https://twitter.com/hashtag/sharingiscaring?src=hash&amp;ref_src=twsrc%5Etfw">#sharingiscaring</a> <a href="https://twitter.com/hashtag/bioinstallmatics?src=hash&amp;ref_src=twsrc%5Etfw">#bioinstallmatics</a>  1/x <a href="https://t.co/WATxmgtOuc">https://t.co/WATxmgtOuc</a></p>&mdash; Curtis Kapsak (@CurtisKapsak) <a href="https://twitter.com/CurtisKapsak/status/974737312155422721?ref_src=twsrc%5Etfw">March 16, 2018</a></blockquote> 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 [I started this tutorial on Twitter](https://twitter.com/CurtisKapsak/status/974737312155422721) but after a suggestion, decided to create a repository to document everything. This way people can comment, suggest changes, make recommendations, etc. to improve the tutorial!
 
 I've created this tutorial to help out anyone interested in doing bioinformatics analyses but they:
@@ -22,7 +27,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * x64 based processor, AKA 64-bit processor (check by going to **Settings** -> **System** -> **About** -> **Device Specifications** -> **System type**)
   * Windows 10 build version 16215 or later. [How to check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number)
     * [It is possible to use an earlier build of Win10, but I've not tried this before.](https://docs.microsoft.com/en-us/windows/wsl/install-win10#for-anniversary-update-and-creators-update-install-using-lxrun)
-  * A good bit of storage space available on your computer's storage drive, at least 2 Gb for basic installation, + however much space you need for your data and additional programs
+  * A good bit of storage space available on your computer's storage drive, at least 2 GB for basic installation, + however much space you need for your data and additional programs
     * For Miniconda—400 MB disk space is required
   
 ### General Resources
@@ -130,7 +135,7 @@ conda config --add channels bioconda
 You should either see a warning message after running the first command, but that is OK, simply proceed with the three commands. You will not see any message or output after entering the third command. That is OK, it just means that there is no output to the terminal.
 
 ## Step 5. Use conda to install any the 3000+ bioinformatics tools available in the Bioconda repository
-Some examples of tools available on Bioconda's Repository. Biased towawrd microbial genomics, but there are LOTS of tools out there. Just try searching for you favorite tools here: https://bioconda.github.io/recipes.html:
+Some examples of tools available on Bioconda's Repository. Just try searching for you favorite tools here: https://bioconda.github.io/recipes.html:
   * fastqc - A quality control tool for high throughput sequence data
   * SPAdes - An assembly toolkit containing various assembly pipelines
   * bwa - The BWA read mapper
@@ -145,7 +150,7 @@ Some examples of tools available on Bioconda's Repository. Biased towawrd microb
   * bedtools - a swiss army knife for genome arithmetic
   * and many, many more
 
-I'm going to demonstrate this using the de novo genome assembly tool, Unicycler, as an example but feel free to try it out with any of the tools listed in the bioconda repository: https://bioconda.github.io/recipes.html
+I'm going to demonstrate this using the bacterial de novo genome assembly tool, Unicycler, as an example but feel free to try it out with any of the tools listed in the bioconda repository: https://bioconda.github.io/recipes.html
 
 1. Create an environment for Unicycler, by running the following at the terminal:
 ```
@@ -162,12 +167,12 @@ You will now see `(unicyclerEnvironment)` in parenthesis show up prior to the no
 
 3. Install Unicycler and all of its dependencies :) into the current environment using:
 ```
-(unicyclerEnvironment) $ conda install unicycler
+(unicyclerEnvironment) user@user~:$ conda install unicycler
 ```
 
 4. Check the list of programs installed by using:
 ```
-(unicyclerEnvironment) $ conda list
+(unicyclerEnvironment) user@user~:$ conda list
 ```
 You can also run this same command from your root environment, but with different syntax:		
 ```
@@ -183,8 +188,13 @@ You should see a list of all dependencies that are installed into the specific e
 ```
 (unicyclerEnvironment) $ source deactivate 
 ```
+You can combine many of the above steps with simple one-liner! This is actually the preferred route, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
+```
+conda create -n spadesEnv spades=3.11.1 bwa samtools fastqc
+```
 
-### Useful one-liners (with `mynewenvironment` as an example):
+
+### Useful conda one-liners (with `mynewenvironment` as an example). I pulled most of these from here: https://conda.io/docs/user-guide/tasks/manage-environments.html
 - Create new conda environment
 ```
 conda create -n mynewenvironment
@@ -195,7 +205,7 @@ source activate mynewenvironment
 ```
 - Deactivate environment (leave environment)
 ```
-(mynewenvironment} $ source deactivate
+(mynewenvironment} user@user~:$ source deactivate
 ```
 - Add a package to an existing environment, for example scipy
 ```
@@ -211,21 +221,14 @@ conda info --envs
 ```
 - List all packages currently installed into the environment
 ```
-conda list
+(mynewenvironment) user@user~:$ conda list
 ```
 
 - All of these can be installed into their own environment with a simple one-liner!!
 ```
 conda create -n unicyclerEnv unicycler
 ```
-### Useful tools I found on Bioconda's Repository https://bioconda.github.io/recipes.html#recipes:
-  * albacore - basecaller for Nanopore sequence data
-  * poretools - toolkit for extracting fastq data and producing run QC figures and statistics
-  * unicycler - de novo assembler used for hybrid short and long read assemblies
-  * abricate - mass screening of contigs for antibiotic resistance genes
-  * bamtools - C++ API and command-line toolkit for working with BAM data
-  * bedtools - a swiss army knife for genome arithmetic
-  * and many, many more
-
-
-
+- Remove a conda environment and all of its installed packages
+```
+conda remove --name mynewenvironment --all
+```
