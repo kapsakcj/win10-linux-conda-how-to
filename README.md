@@ -10,6 +10,14 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
   * Have a computer running Windows 10, 64-bit (with a 64-bit CPU!)
   * Want access to a Linux command line
  
+ ## Outline/Table of Contents
+   1. [Install Linux Subsystem on your computer running Windows 10](#step-1-install-linux-subsystem-on-your-computer-running-windows-10)
+   2. [Install your Linux Distribution of Choice](#step-2-install-your-linux-distribution-of-choice)
+   3. [Install conda into your new Linux environment using Miniconda](#step-3-install-conda-into-your-new-linux-environment-using-miniconda)
+   4. [Set up Bioconda channels in conda](#step-4-set-up-bioconda-channels-in-conda)
+   5. [Use conda to install any of the 3000+ bioinformatics tools available in the Bioconda repository](#step-5-use-conda-to-install-any-of-the-3000-bioinformatics-tools-available-in-the-bioconda-repository)
+
+ 
 #### Why should I use (bio)conda? 
 Check out the pre-print on bioconda here:
 [Bioconda: A sustainable and comprehensive software distribution for the life sciences | bioRxiv](https://www.biorxiv.org/content/early/2017/10/27/207092)
