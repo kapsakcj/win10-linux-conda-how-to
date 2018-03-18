@@ -13,7 +13,10 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
 Check out the pre-print on bioconda here:
 [Bioconda: A sustainable and comprehensive software distribution for the life sciences | bioRxiv](https://www.biorxiv.org/content/early/2017/10/27/207092)
 
-I use it because it is a solution for the mess that is installing dependencies (dependency = software needed to run other software) for bioinformatics software. This program will save you a big headache when trying to run your favorite software - quality control tools, genome assemblers, data visualization, basecallers, etc. There are lots of software out there and each will require installing a specific combination of required dependencies. Bioconda will take that headache away by essentially building a pseudo-environment for you to work in, as if every dependency were already installed (and installed correctly!!). 
+  * reproducability
+  * ease of software installation
+
+I use it mainly because it is a solution for the mess that is installing dependencies (dependency = software needed to run other software) for bioinformatics software. This program will save you a big headache when trying to run your favorite software - quality control tools, genome assemblers, data visualization, basecallers, etc. There are lots of software out there and each will require installing a specific combination of required dependencies. Bioconda will take that headache away by essentially building a pseudo-environment for you to work in, as if every dependency were already installed (and installed correctly!!). 
 
 Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the old version of python that you installed previously, you can install the newer version right on top, and remove it (and revert to the old version) simply with one command when you're ready to. The other beautiful thing is that Bioconda works on most, if not all operating systems.
  
@@ -22,8 +25,9 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * x64 based processor, AKA 64-bit processor (check by going to **Settings** -> **System** -> **About** -> **Device Specifications** -> **System type**)
   * Windows 10 build version 16215 or later. [How to check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number)
     * [It is possible to use an earlier build of Win10, but I've not tried this before.](https://docs.microsoft.com/en-us/windows/wsl/install-win10#for-anniversary-update-and-creators-update-install-using-lxrun)
-  * A good bit of storage space available on your computer's storage drive, at least 2 GB for basic installation, + however much space you need for your data and additional programs
+  * Storage space - A good bit of storage space needs to be available on your computer's storage drive, at least 2 GB for basic installation, + however much space you need for your data and additional programs
     * For Miniconda—400 MB disk space is required
+  * CPU/RAM - you'd likely be OK with a 2 core CPU and maybe 4GB RAM, but the more core's and RAM, the better. My computer has 4-core CPU (i5 Intel) and 8GB of RAM, and it runs just fine. The nice thing about this setup is that the Linux subsystem runs natively and has access to all of your computers resources (unlike Virtualbox, which robs your system's resources just to run)
   
 ### General Resources
   * [Microsoft's documentation on the Windows 10 Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/about)
@@ -108,7 +112,11 @@ The bulk of these directions were pulled from here: https://conda.io/docs/user-g
   * Requests 
     * The Ubuntu distribution available through Microsoft store is 16.04 LTS, comes pre-loaded with these (python 3.5.1). If your distribution doesn't have these, running `sudo apt upgrade` or `sudo apt-get upgrade` may install them.
 
-1. Open your newly created Linux environment and download the bash script by entering the following in the terminal:
+You'll need to download the correct version of the Miniconda (miniconda = conda installer) dependent upon which version of python is installed into you system. Check by running `which python`, `python --version`, or `python3 --version`. Here's the list of all Miniconda installers. https://conda.io/miniconda.html 
+
+You'll want the "Linux 64-bit" installer, for the correct version of python that is installed into your Linux environment.
+
+1. Open your newly created Linux environment and download the miniconda installer bash script by entering the following in the terminal:
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -183,11 +191,11 @@ You should see a list of all dependencies that are installed into the specific e
 
 5. Most programs have a short command used to check the installation, either by running `programName --version` or `programname --help` or sometimes even simply `program name`. In the case of Unicycler, Run the following:
 ```
-(unicyclerEnvironment) $ unicycler --help
+(unicyclerEnvironment) user@user~:$ unicycler --help
 ```
 6. When you would like to leave the unicyclerEnvironment and return to the root environment, use the following command:
 ```
-(unicyclerEnvironment) $ source deactivate 
+(unicyclerEnvironment) user@user~:$ source deactivate 
 ```
 You can combine many of the above steps with simple one-liner! This is actually the **preferred route**, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
 ```
