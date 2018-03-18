@@ -112,11 +112,11 @@ The bulk of these directions were pulled from here: https://conda.io/docs/user-g
   * Requests 
     * The Ubuntu distribution available through Microsoft store is 16.04 LTS, comes pre-loaded with these (python 3.5.1). If your distribution doesn't have these, running `sudo apt upgrade` or `sudo apt-get upgrade` may install them.
 
-You'll need to download the correct version of the Miniconda (miniconda = conda installer) dependent upon which version of python is installed into you system. Check by running `which python`, `python --version`, or `python3 --version`. Here's the list of all Miniconda installers. https://conda.io/miniconda.html 
+You'll need to download the correct version of Miniconda (miniconda = conda installer) dependent upon which version of python is installed into your linux environment. Check by running `which python`, `python --version`, or `python3 --version`. Here's the list of all Miniconda installers. https://conda.io/miniconda.html 
 
 You'll want the "Linux 64-bit" installer, for the correct version of python that is installed into your Linux environment.
 
-1. Open your newly created Linux environment and download the miniconda installer bash script by entering the following in the terminal:
+1. Open your newly created Linux environment and download the miniconda installer bash script by entering the following in the terminal (this command is for the Linux 64-bit python 3.5/3.6 script):
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -231,11 +231,6 @@ conda info --envs
 - List all packages currently installed into the environment
 ```
 (mynewenvironment) user@user~:$ conda list
-```
-
-- All of these can be installed into their own environment with a simple one-liner!!
-```
-conda create -n unicyclerEnv unicycler
 ```
 - Remove a conda environment and all of its installed packages
 ```
