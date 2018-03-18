@@ -8,6 +8,7 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
   * Do not have access to a high performance computing cluster/server/whatever you want to call it
   * Hate VirtualBox or other similar virtual computing applications (robs your computer's resources!)
   * Have a computer running Windows 10, 64-bit (with a 64-bit CPU!)
+  * Want access to a Linux command line
  
 #### Why should I use (bio)conda? 
 Check out the pre-print on bioconda here:
