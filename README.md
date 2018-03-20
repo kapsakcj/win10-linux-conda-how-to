@@ -11,7 +11,6 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
   * Want access to a Linux command line
  
  ## Outline/Table of Contents
-
    1. [Install Linux Subsystem on your computer running Windows 10](#step-1-install-linux-subsystem-on-your-computer-running-windows-10)
    2. [Install your Linux Distribution of Choice](#step-2-install-your-linux-distribution-of-choice)
    3. [Install conda into your new Linux environment using Miniconda](#step-3-install-conda-into-your-new-linux-environment-using-miniconda)
