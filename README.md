@@ -51,7 +51,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
  
  
 ## Step 1. Install Linux Subsystem on your computer running Windows 10
-The first step is to install the Linux Subsystem into your Windows 10 OS. I've copied the bulk of these instructions from Microsoft's documentation found here: https://docs.microsoft.com/en-us/windows/wsl/install-win10 Thanks to the folks at Microsoft for putting together this documentation and making it publicly available on github!
+The first step is to install the Linux Subsystem into your Windows 10 OS. I've copied and modified the bulk of these instructions (and a few images) from Microsoft's documentation found here: https://docs.microsoft.com/en-us/windows/wsl/install-win10 . Thanks to the folks at Microsoft for putting together this documentation and making it publicly available on github!
 
 Enable the "Windows Subsystem for Linux" optional feature and reboot.
 
@@ -112,7 +112,7 @@ I highly reccommend that you scan through this before proceeding. Basically don'
 You can access your computer's storage drives in the directory `/mnt/[name of your drive]` usually`/mnt/c` or `/mnt/d` for saving files there and if you would like to access them from your Linux command line.
 
 ## Step 3. Install conda into your new Linux environment using Miniconda
-The bulk of these directions were pulled from here: https://conda.io/docs/user-guide/install/linux.html 
+The bulk of these directions were copied and modified from here: https://conda.io/docs/user-guide/install/linux.html 
 
 ### Linux Environment Requirements
   * Python 2.7, 3.4, 3.5 or 3.6
@@ -142,7 +142,7 @@ conda list
 For a successful installation, a list of installed packages appears.
 
 ## Step 4. Set up Bioconda channels in conda
-The bulk of these instructions were pulled from here: https://bioconda.github.io/#using-bioconda
+The bulk of these instructions were copied and modified from here: https://bioconda.github.io/#using-bioconda
 
 1.  Run the following three commands from the terminal (IN THIS ORDER!!!)
 ```
