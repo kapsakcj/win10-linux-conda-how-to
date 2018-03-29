@@ -131,7 +131,7 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 2. Run the bash script:
 ```
-bash Miniconda3-latest-Linus-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
 ```
 3. Follow the commands as prompted by the conda installer. You can accept the defaults, and change them later if you want.
 4. To make the changes take effect, close and then re-open the terminal window
