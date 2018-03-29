@@ -181,16 +181,16 @@ Now there is a new "environment" created for running unicycler. It currently is 
 source activate unicyclerEnvironment
 ```
 
-You will now see `(unicyclerEnvironment)` in parenthesis show up prior to the normal ``user@user~:`` tag that is shown at the terminal before you type anything. This means that you are currently working in the environment that you created, running the versions of software that were installed with your program of interest.
+You will now see `(unicyclerEnvironment)` in parenthesis show up prior to the normal ``user@host~:`` tag that is shown at the terminal before you type anything. This means that you are currently working in the environment that you created, running the versions of software that were installed with your program of interest.
 
 3. Install Unicycler and all of its dependencies :) into the current environment using:
 ```
-(unicyclerEnvironment) user@user~:$ conda install unicycler
+(unicyclerEnvironment) user@host~:$ conda install unicycler
 ```
 
 4. Check the list of programs installed by using:
 ```
-(unicyclerEnvironment) user@user~:$ conda list
+(unicyclerEnvironment) user@host~:$ conda list
 ```
 You can also run this same command from your root environment, but with different syntax:		
 ```
@@ -200,11 +200,11 @@ You should see a list of all dependencies that are installed into the specific e
 
 5. Most programs have a short command used to check the installation, either by running `programName --version` or `programname --help` or sometimes even simply `program name`. In the case of Unicycler, Run the following:
 ```
-(unicyclerEnvironment) user@user~:$ unicycler --help
+(unicyclerEnvironment) user@host~:$ unicycler --help
 ```
 6. When you would like to leave the unicyclerEnvironment and return to the root environment, use the following command:
 ```
-(unicyclerEnvironment) user@user~:$ source deactivate 
+(unicyclerEnvironment) user@host~:$ source deactivate 
 ```
 You can combine many of the above steps with simple one-liner! This is actually the **preferred route**, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
 ```
@@ -223,7 +223,7 @@ source activate mynewenvironment
 ```
 - Deactivate environment (leave environment)
 ```
-(mynewenvironment} user@user~:$ source deactivate
+(mynewenvironment} user@host~:$ source deactivate
 ```
 - Add a package to an existing environment, for example scipy
 ```
@@ -239,7 +239,7 @@ conda info --envs
 ```
 - List all packages currently installed into the environment
 ```
-(mynewenvironment) user@user~:$ conda list
+(mynewenvironment) user@host~:$ conda list
 ```
 - Remove a conda environment and all of its installed packages
 ```
