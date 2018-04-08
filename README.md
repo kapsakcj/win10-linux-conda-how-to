@@ -107,7 +107,7 @@ If you use a distribution other than Ubuntu, ensure that it has the following pr
 You're done!  Now you can use your Linux environment.
 
 #### !!Warning about editing linux files using Windows apps and tools!!
-I highly reccommend that you scan through this before proceeding. Basically don't mess with any of the linux files using Windows apps or tools. https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/
+I highly recommend that you scan through this before proceeding. Basically don't mess with any of the linux files using Windows apps or tools. https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/
 
 You can access your computer's storage drives in the directory `/mnt/[name of your drive]` usually`/mnt/c` or `/mnt/d` for saving files there and if you would like to access them from your Linux command line.
 
