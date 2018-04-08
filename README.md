@@ -33,6 +33,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
 ### PC Requirements
   * x64 based processor, AKA 64-bit processor (check by going to **Settings** -> **System** -> **About** -> **Device Specifications** -> **System type**)
   * Windows 10 build version 16215 or later. [How to check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number)
+    * Run Windows Update, and that should bring your OS to the most recent build version.
     * [It is possible to use an earlier build of Win10, but I've not tried this before.](https://docs.microsoft.com/en-us/windows/wsl/install-win10#for-anniversary-update-and-creators-update-install-using-lxrun)
   * Storage space - A good bit of storage space needs to be available on your computer's storage drive, at least 2 GB for basic installation, + however much space you need for your data and additional programs
     * For Miniconda—400 MB disk space is required
