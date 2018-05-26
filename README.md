@@ -35,7 +35,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * Windows 10 build version 16215 or later. [How to check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number)
     * Run Windows Update, and that should bring your OS to the most recent build version.
     * [It is possible to use an earlier build of Win10, but I've not tried this before.](https://docs.microsoft.com/en-us/windows/wsl/install-win10#for-anniversary-update-and-creators-update-install-using-lxrun)
-  * Storage space - A good bit of storage space needs to be available on your computer's storage drive, at least 2 GB for basic installation, + however much space you need for your data and additional programs
+  * Storage space - at least 2 GB for basic installation, + space for your data and additional programs
     * For Miniconda—400 MB disk space is required
   * CPU/RAM - you'd likely be OK with a 2 core CPU and maybe 4GB RAM, but the more core's and RAM, the better. My computer has 4-core CPU (i5 Intel) and 8GB of RAM, and it runs just fine. The nice thing about this setup is that the Linux subsystem runs natively and has access to all of your computers resources (unlike Virtualbox, which robs your system's resources just to run)
   
