@@ -7,6 +7,7 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
   * Do not have a Mac or a computer running Linux (running natively)
   * Do not have access to a high performance computing cluster/server/whatever you want to call it
   * Hate VirtualBox or other similar virtual computing applications (robs your computer's resources!)
+  * Also hate setting up a functional dual-boot setup
   * Have a computer running Windows 10, 64-bit (with a 64-bit CPU!)
   * Want access to a Linux command line
  
