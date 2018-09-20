@@ -149,8 +149,8 @@ The bulk of these instructions were copied and modified from here: https://bioco
 1.  Run the following three commands from the terminal (IN THIS ORDER!!!)
 ```
 conda config --add channels defaults
-conda config --add channels conda-forge
 conda config --add channels bioconda
+conda config --add channels conda-forge
 ```
 You should see a warning message after running the first command, but that is OK, simply proceed with the three commands. You will not see any message or output after entering the third command. That is OK, it just means that there is no output to the terminal.
 
