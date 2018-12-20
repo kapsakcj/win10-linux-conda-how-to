@@ -162,7 +162,6 @@ Some examples of tools available on Bioconda's Repository. Just try searching fo
   * samtools - Tools for dealing with SAM, BAM and CRAM files
   * bamtools - C++ API and command-line toolkit for working with BAM data
   * bedtools - a swiss army knife for genome arithmetic
-  * albacore - basecaller for Nanopore sequence data
   * poretools - toolkit for extracting fastq data and producing run QC figures and statistics
   * unicycler - de novo assembler used for hybrid short and long read assemblies
   * abricate - mass screening of contigs for antibiotic resistance genes
@@ -180,7 +179,7 @@ Now there is a new "environment" created for running unicycler. It currently is 
 
 2. Now activate the environment with:
 ```
-source activate unicyclerEnvironment
+conda activate unicyclerEnvironment
 ```
 
 You will now see `(unicyclerEnvironment)` in parenthesis show up prior to the normal ``user@host~:`` tag that is shown at the terminal before you type anything. This means that you are currently working in the environment that you created, running the versions of software that were installed with your program of interest.
@@ -200,13 +199,13 @@ conda list -n unicyclerEnvironment
 ```
 You should see a list of all dependencies that are installed into the specific environment that you are working in. There are many ways to change and manipulate this list. See the one liners below.
 
-5. Most programs have a short command used to check the installation, either by running `programName --version` or `programname --help` or sometimes even simply `program name`. In the case of Unicycler, Run the following:
+5. Most programs have a short command used to check the installation, either by running `programName --version` or `programname --help` or sometimes even simply `programName`. In the case of Unicycler, Run the following:
 ```
 (unicyclerEnvironment) user@host~:$ unicycler --help
 ```
 6. When you would like to leave the unicyclerEnvironment and return to the root environment, use the following command:
 ```
-(unicyclerEnvironment) user@host~:$ source deactivate 
+(unicyclerEnvironment) user@host~:$ conda deactivate 
 ```
 You can combine many of the above steps with simple one-liner! This is actually the **preferred route**, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
 ```
@@ -221,11 +220,11 @@ conda create -n mynewenvironment
 ```
 - Activate environment (start working within the environment)
 ```
-source activate mynewenvironment
+conda activate mynewenvironment
 ```
 - Deactivate environment (leave environment)
 ```
-(mynewenvironment} user@host~:$ source deactivate
+(mynewenvironment} user@host~:$ conda deactivate
 ```
 - Add a package to an existing environment, for example scipy
 ```
