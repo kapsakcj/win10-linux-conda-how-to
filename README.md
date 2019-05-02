@@ -20,7 +20,10 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
 
  
 #### Why should I use (bio)conda? 
-Check out the pre-print on bioconda here:
+Check out the ~~pre-print~~ Publication on bioconda here:
+[Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
+
+Or the pre-print on BioRxiv:
 [Bioconda: A sustainable and comprehensive software distribution for the life sciences | bioRxiv](https://www.biorxiv.org/content/early/2017/10/27/207092)
 
   * reproducability
