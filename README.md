@@ -20,7 +20,7 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
 
  
 #### Why should I use (bio)conda? 
-Check out the ~~pre-print~~ Publication on bioconda here:
+Check out the ~~pre-print~~ Nature Methods publication on bioconda here:
 [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
 
 Or the pre-print on BioRxiv:
@@ -47,7 +47,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * [Microsoft's documentation on the Windows 10 Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/about)
   * [FAQ's about the Windows 10 Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/faq)
   * [What's the difference between conda, anaconda, and miniconda?](https://bioconda.github.io/faqs.html#conda-anaconda-minconda)
-  * [Bioconda: A sustainable and comprehensive software distribution for the life sciences | bioRxiv](https://www.biorxiv.org/content/early/2017/10/27/207092)
+  * [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
   * [Using Bioconda -- Bioconda documentation](https://bioconda.github.io/)
   * [Managing conda environments](https://conda.io/docs/user-guide/tasks/manage-environments.html)
   * [WARNING from Microsoft: Do not change Linux files using Windows apps and tools](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
@@ -158,7 +158,7 @@ conda config --add channels conda-forge
 You should see a warning message after running the first command, but that is OK, simply proceed with the three commands. You will not see any message or output after entering the third command. That is OK, it just means that there is no output to the terminal.
 
 ## Step 5. Use conda to install any of the 3000+ bioinformatics tools available in the Bioconda repository
-Some examples of tools available on Bioconda's Repository. Just try searching for you favorite tools here: https://bioconda.github.io/recipes.html:
+Some examples of tools available on Bioconda's Repository. Just try searching for you favorite tools here: https://bioconda.github.io/conda-recipe_index.html:
   * fastqc - A quality control tool for high throughput sequence data
   * SPAdes - An assembly toolkit containing various assembly pipelines
   * bwa - The BWA read mapper
@@ -172,7 +172,7 @@ Some examples of tools available on Bioconda's Repository. Just try searching fo
   * bedtools - a swiss army knife for genome arithmetic
   * and many, many more
 
-I'm going to demonstrate this using the bacterial de novo genome assembly tool, Unicycler, as an example but feel free to try it out with any of the tools listed in the bioconda repository: https://bioconda.github.io/recipes.html
+I'm going to demonstrate this using the bacterial de novo genome assembly tool, Unicycler, as an example but feel free to try it out with any of the tools listed in the bioconda repository: https://bioconda.github.io/conda-recipe_index.html
 
 1. Create an environment for Unicycler, by running the following at the terminal:
 ```
