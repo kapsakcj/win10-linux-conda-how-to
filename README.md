@@ -10,7 +10,7 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
   * Also hate setting up a functional dual-boot setup
   * Have a computer running Windows 10, 64-bit (with a 64-bit CPU!)
   * Want access to a Linux command line
- 
+
  ## Outline/Table of Contents
    1. [Install Linux Subsystem on your computer running Windows 10](#step-1-install-linux-subsystem-on-your-computer-running-windows-10)
    2. [Install your Linux Distribution of Choice](#step-2-install-your-linux-distribution-of-choice)
@@ -18,8 +18,8 @@ I've created this tutorial to help out anyone interested in doing bioinformatics
    4. [Set up Bioconda channels in conda](#step-4-set-up-bioconda-channels-in-conda)
    5. [Use conda to install any of the 6000+ bioinformatics tools available in the Bioconda repository](#step-5-use-conda-to-install-any-of-the-6000-bioinformatics-tools-available-in-the-bioconda-repository)
 
- 
-#### Why should I use (bio)conda? 
+
+#### Why should I use (bio)conda?
 Check out the ~~pre-print~~ Nature Methods publication on bioconda here:
 [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
 
@@ -29,11 +29,11 @@ Or the pre-print on BioRxiv:
   * reproducability
   * ease of software installation
 
-I use it mainly because it is a solution for the mess that is installing dependencies (dependency = software needed to run other software) for bioinformatics software. This program will save you a big headache when trying to run your favorite software - quality control tools, genome assemblers, data visualization, basecallers, etc. There are lots of software out there and each will require installing a specific combination of required dependencies. Bioconda will take that headache away by essentially building a pseudo-environment for you to work in, as if every dependency were already installed (and installed correctly!!). 
+I use it mainly because it is a solution for the mess that is installing dependencies (dependency = software needed to run other software) for bioinformatics software. This program will save you a big headache when trying to run your favorite software - quality control tools, genome assemblers, data visualization, basecallers, etc. There are lots of software out there and each will require installing a specific combination of required dependencies. Bioconda will take that headache away by essentially building a pseudo-environment for you to work in, as if every dependency were already installed (and installed correctly!!).
 
 Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the old version of python that you installed previously, you can install the newer version right on top, and remove it (and revert to the old version) simply with one command when you're ready to. The other beautiful thing is that Bioconda works on most, if not all operating systems.
- 
-  
+
+
 ### PC Requirements
   * x64 based processor, AKA 64-bit processor (check by going to **Settings** -> **System** -> **About** -> **Device Specifications** -> **System type**)
   * Windows 10 build version 16215 or later. [How to check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number)
@@ -42,7 +42,7 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * Storage space - at least 2 GB for basic installation, + space for your data and additional programs
     * For Miniconda—400 MB disk space is required
   * CPU/RAM - you'd likely be OK with a 2 core CPU and maybe 4GB RAM, but the more core's and RAM, the better. My computer has 4-core CPU (i5 Intel) and 8GB of RAM, and it runs just fine. The nice thing about this setup is that the Linux subsystem runs natively and has access to all of your computers resources (unlike Virtualbox, which robs your system's resources just to run)
-  
+
 ### General Resources
   * [Microsoft's documentation on the Windows 10 Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/about)
   * [FAQ's about the Windows 10 Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/faq)
@@ -51,10 +51,10 @@ Need to change from Python v.2.7 to 3.6? No problem. No need to un-install the o
   * [Using Bioconda -- Bioconda documentation](https://bioconda.github.io/)
   * [Managing conda environments](https://conda.io/docs/user-guide/tasks/manage-environments.html)
   * [WARNING from Microsoft: Do not change Linux files using Windows apps and tools](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
-  
 
- 
- 
+
+
+
 ## Step 1. Install Linux Subsystem on your computer running Windows 10
 The first step is to install the Linux Subsystem into your Windows 10 OS. I've copied and modified the bulk of these instructions (and a few images) from Microsoft's documentation found here: https://docs.microsoft.com/en-us/windows/wsl/install-win10 . Thanks to the folks at Microsoft for putting together this documentation and making it publicly available on github!
 
@@ -91,22 +91,22 @@ If you use a distribution other than Ubuntu, ensure that it has the following pr
 
 2. Select "Get"
 
-    > **Troubleshooting: Installation failed with error 0x80070003**  
-    > The Windows Subsystem for Linux only runs on your system drive (usually this is your C: drive).  Make sure that new apps are stored on your system drive.  
+    > **Troubleshooting: Installation failed with error 0x80070003**
+    > The Windows Subsystem for Linux only runs on your system drive (usually this is your C: drive).  Make sure that new apps are stored on your system drive.
     > Open **Settings** -> **Storage** -> **More Storage Settings: Change where new content is saved**
     > ![](AppStorage.png)
-    
-3. Once the download has completed, select "Launch".  
+
+3. Once the download has completed, select "Launch".
     This will open a console window.  Wait for installation to complete then you will be prompted to create your LINUX user account.
     ![](UbuntuInstall.png)
-    
-    > **Troubleshooting: Installation failed with error 0x8007007e**  
+
+    > **Troubleshooting: Installation failed with error 0x8007007e**
     > This error occurs when your system doesn't support Linux from the store.  Make sure that:
     > * You're running Windows build 16215 or later. [Check your build](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number).
     > * The Windows Subsystem for Linux optional component is enabled and the computer has restarted.  [Make sure WSL is enabled](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#confirm-wsl-is-enabled).
 
 
-    
+
 5. Create your LINUX username and password.  This user account has no relationship to your Windows username and password and hence can be different. [Read more](https://docs.microsoft.com/en-us/windows/wsl/user-support).
 
 You're done!  Now you can use your Linux environment.
@@ -117,16 +117,16 @@ I highly recommend that you scan through this before proceeding. Basically don't
 You can access your computer's storage drives in the directory `/mnt/[name of your drive]` usually`/mnt/c` or `/mnt/d` for saving files there and if you would like to access them from your Linux command line.
 
 ## Step 3. Install conda into your new Linux environment using Miniconda
-The bulk of these directions were copied and modified from here: https://conda.io/docs/user-guide/install/linux.html 
+The bulk of these directions were copied and modified from here: https://conda.io/docs/user-guide/install/linux.html
 
 ### Linux Environment Requirements
   * Python 2.7, 3.4, 3.5 or 3.6
   * pycosat
   * PyYaml
-  * Requests 
+  * Requests
     * The Ubuntu distribution available through Microsoft store is 16.04 LTS, comes pre-loaded with these (python 3.5.1). If your distribution doesn't have these, running `sudo apt upgrade` or `sudo apt-get upgrade` may install them.
 
-You'll need to download the correct version of Miniconda (miniconda = conda installer) dependent upon which version of python is installed into your linux environment. Check by running `which python`, `python --version`, or `python3 --version`. Here's the list of all Miniconda installers. https://conda.io/miniconda.html 
+You'll need to download the correct version of Miniconda (miniconda = conda installer) dependent upon which version of python is installed into your linux environment. Check by running `which python`, `python --version`, or `python3 --version`. Here's the list of all Miniconda installers. https://conda.io/miniconda.html
 
 You'll want the "Linux 64-bit" installer, for the correct version of python that is installed into your Linux environment.
 
@@ -139,12 +139,24 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 3. Follow the commands as prompted by the conda installer. You can accept the defaults, and change them later if you want.
-4. To make the changes take effect, close and then re-open the terminal window
-5. Test your installation by running:
+4. To make the changes take effect, run the following command in your terminal:
+```bash
+source ~/.bashrc
 ```
+5. Test your installation by running:
+```bash
 conda list
 ```
 For a successful installation, a list of installed packages appears.
+
+If the error `bash: conda: command not found`, run the following code in your terminal:
+
+```bash
+echo 'export PATH="$HOME/miniconda3/bin:$PATH"' >> $HOME/.bashrc
+source $HOME/.bashrc
+```
+
+*Note: miniconda3 is the default folder where Miniconda is installed. This name could change in the future. If that is the case, replace miniconda3 with the name of the folder Miniconda is installed in.*
 
 ## Step 4. Set up Bioconda channels in conda
 The bulk of these instructions were copied and modified from here: https://bioconda.github.io/#using-bioconda
@@ -196,7 +208,7 @@ You will now see `(unicyclerEnvironment)` in parenthesis show up prior to the no
 ```
 (unicyclerEnvironment) user@host~:$ conda list
 ```
-You can also run this same command from your root environment, but with different syntax:		
+You can also run this same command from your root environment, but with different syntax:
 ```
 conda list -n unicyclerEnvironment
 ```
@@ -208,7 +220,7 @@ You should see a list of all dependencies that are installed into the specific e
 ```
 6. When you would like to leave the unicyclerEnvironment and return to the root environment, use the following command:
 ```
-(unicyclerEnvironment) user@host~:$ conda deactivate 
+(unicyclerEnvironment) user@host~:$ conda deactivate
 ```
 You can combine many of the above steps with simple one-liner! This is actually the **preferred route**, because you can install multiple tools at once, and ensure that conda installs compatible dependencies.
 ```
@@ -252,4 +264,4 @@ conda remove --name mynewenvironment --all
 
 ## Bonus Goodies
   * [How to change the font and window colors so that your eyes don't bleed from Microsoft's awful choice of default colors](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2)
-  * 
+  *
